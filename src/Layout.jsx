@@ -87,6 +87,16 @@ export function ServiceMedia({ service, embed = false }) {
     );
 }
 
+// Blue and grey wave under the logo, as on the printed logo.
+export function Swoosh() {
+    return (
+        <svg className="brand-swoosh" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true">
+            <path className="swoosh-grey" d="M38 15 C 110 30, 210 24, 292 12 C 210 19, 115 25, 38 15 Z" />
+            <path className="swoosh-blue" d="M1 2 C 55 20, 160 22, 298 9 C 170 13, 70 15, 1 2 Z" />
+        </svg>
+    );
+}
+
 export function Phones() {
     return company.phones.map((p) => <a key={p.tel} href={`tel:${p.tel}`}>{p.display}</a>);
 }
@@ -180,6 +190,7 @@ function Header() {
                     <Link className="brand" to="/" aria-label="Marshall Tech, home">
                         <Mark />
                         <Wordmark />
+                        <Swoosh />
                     </Link>
                     <button className="nav-toggle" type="button" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
                         <span className="nav-toggle-lines" aria-hidden="true"></span>
@@ -210,6 +221,7 @@ function Footer() {
                     <Link className="brand brand-on-dark" to="/">
                         <Mark />
                         <Wordmark />
+                        <Swoosh />
                     </Link>
                     <p className="footer-note">We automate your home. We welcome customization in your automation.</p>
                 </div>

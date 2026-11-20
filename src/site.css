@@ -211,11 +211,40 @@ p {
 }
 
 .brand {
+    position: relative;
     display: flex;
+    width: fit-content;
     align-items: center;
     gap: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     min-width: 0;
+}
+
+.brand-swoosh {
+    position: absolute;
+    left: 2px;
+    right: -6px;
+    bottom: -2px;
+    width: calc(100% + 4px);
+    height: 14px;
+    pointer-events: none;
+}
+
+.swoosh-blue {
+    fill: var(--blue);
+}
+
+.swoosh-grey {
+    fill: #b5b9bf;
+}
+
+.brand-on-dark .swoosh-blue {
+    fill: #4d8bf0;
+}
+
+.brand-on-dark .swoosh-grey {
+    fill: rgba(255, 255, 255, 0.45);
 }
 
 .mark {
@@ -247,19 +276,33 @@ p {
 
 .brand-text b {
     color: var(--red);
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.62em;
-    margin: 3px -0.62em 2px 0;
+    font-family: "Archivo Black", "Arial Black", var(--sans);
+    font-size: 1.02rem;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 0.58em;
+    margin: 4px -0.58em 2px 0;
     text-transform: uppercase;
 }
 
 .brand-text em {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: #555b63;
-    font-size: 0.66rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.brand-text em::before,
+.brand-text em::after {
+    content: "";
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
 }
 
 .nav {
@@ -1288,7 +1331,8 @@ p {
 
     .brand {
         min-width: 0;
-        flex: 1 1 auto;
+        flex: 0 1 auto;
+        margin-right: auto;
     }
 
     .nav-toggle {
