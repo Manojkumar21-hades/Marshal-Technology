@@ -8,15 +8,15 @@ export const company = {
     websiteLabel: "marshallin.in",
     websiteUrl: "https://marshallin.in",
     phones: [
-        { display: "94428 91189", tel: "+919442891189" },
-        { display: "94430 22037", tel: "+919443022037" },
+        { display: "91599 29159", tel: "+919159929159" },
+        { display: "90421 45767", tel: "+919042145767" },
     ],
     // Company social media profiles. Leave a link empty ("") to hide that icon.
     social: {
         youtube: "",
         instagram: "",
         facebook: "",
-        whatsapp: "https://wa.me/919442891189",
+        whatsapp: "https://wa.me/919159929159",
     },
     studios: [
         {

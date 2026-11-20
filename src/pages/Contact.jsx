@@ -10,7 +10,7 @@ export function validate(f) {
     const e = {};
     if (!f.name.trim()) e.name = "Tell us your name.";
     if (!f.phone.trim()) e.phone = "Enter a mobile number we can call.";
-    else if (!PHONE_RE.test(f.phone.trim())) e.phone = "Use a 10-digit mobile number, for example 94428 91189.";
+    else if (!PHONE_RE.test(f.phone.trim())) e.phone = "Use a 10-digit mobile number, for example 98765 43210.";
     if (!f.email.trim()) e.email = "Enter an email address.";
     else if (!EMAIL_RE.test(f.email.trim())) e.email = "That email address does not look complete.";
     if (!f.interest) e.interest = "Choose what you want to talk about.";
