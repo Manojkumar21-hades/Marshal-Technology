@@ -88,9 +88,9 @@ export default function Home() {
                         <p className="lede">Entrance and home automation, CCTV, home theatre, inverters and batteries, hot water, and water purification. Every job is customized for the house.</p>
                     </div>
                     <div className="service-grid">
-                        {services.map((s, i) => (
+                        {services.map((s) => (
                             <article className="service" key={s.slug}>
-                                <p className="service-index">{String(i + 2).padStart(2, "0")} · {s.kicker}</p>
+                                <p className="service-index">{s.number} · {s.kicker}</p>
                                 <h3><Link to={`/projects#${s.slug}`}>{s.name}</Link></h3>
                                 <p>{s.summary}</p>
                                 <ul className="service-items">{s.includes.map((x) => <li key={x}>{x}</li>)}</ul>

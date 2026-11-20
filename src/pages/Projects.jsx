@@ -16,10 +16,10 @@ export default function Projects() {
 
             <section className="section section-alt" id="solutions">
                 <div className="wrap solution-list">
-                    {solutions.map((s, i) => (
+                    {solutions.map((s) => (
                         <article className="solution" id={s.slug} key={s.slug}>
                             <div>
-                                <p className="kicker">{String(i + 2).padStart(2, "0")} · {s.kicker}</p>
+                                <p className="kicker">{s.number} · {s.kicker}</p>
                                 <h2>{s.name}</h2>
                                 <p>{s.summary}</p>
                             </div>

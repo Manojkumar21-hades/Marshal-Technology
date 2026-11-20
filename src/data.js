@@ -33,46 +33,47 @@ export const company = {
 };
 
 // Service list in the order the client gave it (update from Marshall Tech, Nov 2026).
+// "number" follows the client's numbering: CCTV is listed under point 3 with Home Automation.
 // Paste each service video link into "video". Until then the site shows "Video coming soon".
 export const services = [
     {
-        slug: "entrance-automation", name: "Entrance Automation", kicker: "Automation",
+        slug: "entrance-automation", number: "02", name: "Entrance Automation", kicker: "Automation",
         summary: "Gates and shutters that open from a remote, a phone, or a wall button, with safety stops built in.",
         includes: ["Sliding gate automation", "Swing gate automation", "Rolling shutter automation", "Remote, phone, and keypad control", "Safety sensors and manual release"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "home-automation", name: "Home Automation", kicker: "Smart home",
+        slug: "home-automation", number: "03", name: "Home Automation", kicker: "Smart home",
         summary: "Switches, sockets, sensors, valves, curtains, and water level, all on one app and customized for your house.",
         includes: ["Smart switch, socket, MCB, and energy meter", "Gas and water leakage sensors", "Valve control", "Curtain and blind automation", "Pergola automation", "Water level control", "Customized automation for your routine"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "cctv", name: "Surveillance Cameras (CCTV)", kicker: "Security",
+        slug: "cctv", number: "03", name: "Surveillance Cameras (CCTV)", kicker: "Security",
         summary: "Analog and IP cameras with recording on site and live view on the phone, plus a video door phone at the entrance.",
         includes: ["Analog cameras", "IP cameras", "Video door phone", "Recording on the premises", "Live view on your phone"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "home-theatre", name: "Home Theatre System", kicker: "Entertainment",
+        slug: "home-theatre", number: "04", name: "Home Theatre System", kicker: "Entertainment",
         summary: "Screen, speakers, and seating planned together, with the wiring hidden before the walls are finished.",
         includes: ["Speaker and screen layout for the room", "Concealed cabling", "Amplifier and source setup", "Lighting scene for movie time"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "inverter-battery", name: "Inverter & Battery", kicker: "Power backup",
+        slug: "inverter-battery", number: "05", name: "Inverter & Battery", kicker: "Power backup",
         summary: "On-grid, off-grid, and hybrid systems, with the battery chemistry chosen for your load and budget.",
         includes: ["On-grid inverter", "Off-grid inverter", "Hybrid inverter", "Tubular and SMF batteries", "Lithium-ion batteries", "Sodium-ion batteries"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "water-heating", name: "Heat Pumps & Solar Water Heaters", kicker: "Hot water",
+        slug: "water-heating", number: "06", name: "Heat Pumps & Solar Water Heaters", kicker: "Hot water",
         summary: "Hot water that costs less to run: heat pumps for steady supply and solar water heaters where the roof gets the sun.",
         includes: ["Heat pump water heaters", "Solar water heaters", "Sized for the household", "Installation and plumbing"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
     },
     {
-        slug: "water-purification", name: "Water Purification System", kicker: "Clean water",
+        slug: "water-purification", number: "07", name: "Water Purification System", kicker: "Clean water",
         summary: "Filters for homes, shops, and larger sites, chosen after looking at the water you actually get.",
         includes: ["Domestic water filter", "Commercial filter", "Multimedia filter", "Installation and service"],
         video: "", // one video for this service: product use, installation, service (YouTube / Instagram / Facebook link)
