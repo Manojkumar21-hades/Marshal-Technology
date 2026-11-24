@@ -77,7 +77,7 @@ export default function Contact() {
                         {sent && (
                             <div className="banner" role="status">
                                 <strong>Thank you.</strong>
-                                <p>We have your note. Someone from the Coimbatore or Coonoor studio will call you.</p>
+                                <p>We have your note. Someone from the Coonoor or Coimbatore studio will call you.</p>
                             </div>
                         )}
                         {Object.keys(errors).length > 0 && <p className="form-error">Please check the fields marked below.</p>}

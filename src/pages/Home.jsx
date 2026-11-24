@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Band, Phones, ServiceMedia, Steps, TeamSection } from "../Layout.jsx";
-import { services, pins, scenes, steps, patterns } from "../data.js";
+import { Band, Phones, TeamSection } from "../Layout.jsx";
+import { services, pins, scenes, patterns } from "../data.js";
 
 const RAIL = [
     { title: "Save water", text: "A pump that stops when the tank is full, and holds when the sump is dry.", icon: <path fill="currentColor" d="M16 3s7 8 7 14a7 7 0 0 1-14 0c0-6 7-14 7-14z" /> },
     { title: "Save energy", text: "Essential circuits on backup. Solar where the roof can earn its place.", icon: <path fill="currentColor" d="M16 2l2.2 8.2L26 12l-6.4 4.2L22 25l-6-4.2L10 25l2.4-8.8L6 12l7.8-1.8z" /> },
     { title: "Your routine", text: "Scenes are written for this house. A stock kit is the starting conversation, not the result.", icon: <><circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" strokeWidth="2" /><path fill="currentColor" d="M15 9h2v8l4.5 2.6-1 1.7L15 18.2z" /></> },
-    { title: "Two studios", text: "Rathinapuri in Coimbatore, and Grace Hill in Coonoor.", icon: <><path fill="none" stroke="currentColor" strokeWidth="2" d="M8 26V12l8-6 8 6v14H8z" /><path fill="currentColor" d="M14 26v-7h4v7z" /></> },
+    { title: "Safe entrance", text: "Gates, cameras, and a video door phone, so you know who is at the door before it opens.", icon: <path fill="none" stroke="currentColor" strokeWidth="2" d="M16 4l10 4v7c0 6-4.3 10.4-10 13-5.7-2.6-10-7-10-13V8z" /> },
 ];
 
 // [x, y] of each numbered pin on the house diagram
@@ -44,16 +44,16 @@ export default function Home() {
             <section className="hero">
                 <div className="wrap hero-grid">
                     <div className="hero-copy">
-                        <p className="kicker">Coimbatore · Coonoor</p>
+                        <p className="kicker">Nilgiris · Coimbatore</p>
                         <h1>We automate <em>your home.</em></h1>
-                        <p className="lede">We welcome customization in your automation. Gates, smart switches, CCTV, home theatre, inverters, hot water, and water purification, planned for the way the house is actually used.</p>
+                        <p className="lede">We welcome customization in your automation. From the gate to the water tap, one team plans, installs, and services it, in the Nilgiris and Coimbatore.</p>
                         <div className="hero-actions">
                             <Link className="btn" to="/contact">Plan a visit</Link>
                             <Link className="btn btn-ghost" to="/projects">Our services</Link>
                         </div>
                         <dl className="hero-facts">
                             <div><dt>Call</dt><dd><Phones /></dd></div>
-                            <div><dt>Studios</dt><dd>Rathinapuri, Coimbatore<br />Grace Hill, Coonoor</dd></div>
+                            <div><dt>Studios</dt><dd>Grace Hill, Coonoor (Nilgiris)<br />Rathinapuri, Coimbatore</dd></div>
                         </dl>
                     </div>
                     <figure className="hero-figure">
@@ -84,17 +84,16 @@ export default function Home() {
                 <div className="wrap">
                     <div className="section-head">
                         <p className="kicker">Our services</p>
-                        <h2>Automation, security, power, and water, from one team.</h2>
-                        <p className="lede">Entrance and home automation, CCTV, home theatre, inverters and batteries, hot water, and water purification. Every job is customized for the house.</p>
+                        <h2>Seven services, one team.</h2>
+                        <p className="lede">Pick a service to see everything it covers and watch its video.</p>
                     </div>
                     <div className="service-grid">
                         {services.map((s) => (
                             <article className="service" key={s.slug}>
                                 <p className="service-index">{s.number} · {s.kicker}</p>
                                 <h3><Link to={`/projects#${s.slug}`}>{s.name}</Link></h3>
-                                <p>{s.summary}</p>
-                                <ul className="service-items">{s.includes.map((x) => <li key={x}>{x}</li>)}</ul>
-                                <ServiceMedia service={s} />
+                                <p>{s.short}</p>
+                                <Link className="service-more" to={`/projects#${s.slug}`}>Details &amp; video <span aria-hidden="true">→</span></Link>
                             </article>
                         ))}
                     </div>
@@ -123,22 +122,12 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section">
-                <div className="wrap">
-                    <div className="section-head">
-                        <p className="kicker">How a job runs</p>
-                        <h2>Four steps, then the house is yours to run.</h2>
-                    </div>
-                    <Steps items={steps} />
-                </div>
-            </section>
-
             <section className="section section-tight">
                 <div className="wrap">
                     <div className="section-head">
-                        <p className="kicker">Patterns</p>
-                        <h2>Four kinds of house we keep drawing.</h2>
-                        <p className="lede">These are patterns, not a list of finished client names. A real job starts when we have your plan.</p>
+                        <p className="kicker">Where we work</p>
+                        <h2>The Nilgiris and Coimbatore.</h2>
+                        <p className="lede">Two places, two kinds of need. Every plan is drawn for your house.</p>
                     </div>
                     <div className="pattern-grid">
                         {patterns.map((p) => (
@@ -148,25 +137,12 @@ export default function Home() {
                                     <p className="kicker">{p.place}</p>
                                     <h3>{p.title}</h3>
                                     <p>{p.summary}</p>
+                                    <ul className="service-items">{p.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
                                 </div>
                             </article>
                         ))}
                     </div>
                     <p className="section-link"><Link to="/projects">All services</Link></p>
-                </div>
-            </section>
-
-            <section className="section">
-                <div className="wrap">
-                    <div className="section-head">
-                        <p className="kicker">Customization</p>
-                        <h2>Say it the way you would say it at home.</h2>
-                    </div>
-                    <div className="scene-grid">
-                        {scenes.map((s) => (
-                            <blockquote key={s.name}><p>{s.summary}</p><footer>{s.name}</footer></blockquote>
-                        ))}
-                    </div>
                 </div>
             </section>
 

@@ -19,8 +19,8 @@ export default function Gallery() {
             <section className="page-hero">
                 <div className="wrap">
                     <p className="kicker">Gallery</p>
-                    <h1>Concept studies.</h1>
-                    <p className="lede">These frames show lighting, security, power, and water the way a finished Marshall Tech house should feel. They are design references, not photographs of a named client project. Real project photographs can replace them as jobs are handed over.</p>
+                    <h1>Our work, in pictures.</h1>
+                    <p className="lede">Reference photos for our services. Photos of finished Marshall Tech projects will be added here.</p>
                     <div className="filters" role="toolbar" aria-label="Filter the gallery">
                         {["all", ...galleryCategories].map((c) => (
                             <button key={c} type="button" className={`filter${filter === c ? " is-active" : ""}`} onClick={() => setFilter(c)}>
@@ -55,7 +55,7 @@ export default function Gallery() {
                 </figure>
             </dialog>
 
-            <Band />
+            <Band page="gallery" />
         </>
     );
 }

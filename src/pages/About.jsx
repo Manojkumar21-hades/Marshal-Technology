@@ -1,4 +1,4 @@
-import { Band, Steps, Studios, TeamSection } from "../Layout.jsx";
+import { Band, Steps } from "../Layout.jsx";
 import { steps } from "../data.js";
 
 export default function About() {
@@ -7,9 +7,9 @@ export default function About() {
             <section className="page-hero">
                 <div className="wrap page-hero-grid">
                     <div>
-                        <p className="kicker">About the studio</p>
+                        <p className="kicker">About us</p>
                         <h1>Inspiring innovation, one house at a time.</h1>
-                        <p className="lede">Marshall Tech automates homes from two studios: Rathinapuri in Coimbatore, and Grace Hill in Coonoor. We welcome customization in that automation.</p>
+                        <p className="lede">Marshall Tech works from Grace Hill in Coonoor, the Nilgiris, and Rathinapuri in Coimbatore. We plan, install, and service technology for homes and businesses.</p>
                     </div>
                     <figure className="frame">
                         <img src="/images/panel.jpg" alt="Concept study of a wall panel and a phone on a timber console." />
@@ -21,25 +21,23 @@ export default function About() {
             <section className="section">
                 <div className="wrap split">
                     <div>
-                        <p className="kicker">The work</p>
+                        <p className="kicker">Who we are</p>
                         <h2>More than a switch on a phone.</h2>
-                        <p>A finished job can be the gate, the smart switches and sensors, the cameras and video door phone, the home theatre, the inverter and battery, the hot water, and the water filter, all fitted by one team.</p>
-                        <p>Every house is different, so every plan is customized. Our own team visits, installs, and comes back for service in the districts we cover.</p>
+                        <p>We started with LEDs, controllers, and sensors. Today we take care of the whole house: what keeps it safe, what keeps it running when the power goes, and what keeps the water clean.</p>
+                        <p>We do not sell a boxed kit. We listen first, then suggest only what your house needs.</p>
                     </div>
                     <div className="creed">
                         <article>
-                            <h3>Save water</h3>
-                            <p>Water level control that stops the pump when the tank is full, leakage sensors that catch a burst pipe, and filters sized for the people who live there.</p>
+                            <h3>Customized, not copied</h3>
+                            <p>Two houses on the same street are not run the same way. Your plan is written for your rooms, your family, and your budget.</p>
                         </article>
                         <article>
-                            <h3>Save energy</h3>
-                            <p>On-grid, off-grid, and hybrid inverters with the right battery. Heat pumps and solar water heaters for cheaper hot water. An energy meter that shows where the units go.</p>
+                            <h3>We come back</h3>
+                            <p>A system is only good if someone looks after it. Call the same number for a change, a repair, or a yearly check.</p>
                         </article>
                     </div>
                 </div>
             </section>
-
-            <TeamSection />
 
             <section className="section section-tight">
                 <div className="wrap">
@@ -59,23 +57,12 @@ export default function About() {
                     <div>
                         <p className="kicker">Quality</p>
                         <h2>ISO 9001:2015 certified.</h2>
-                        <p>The certificate is about how a job is specified, installed, and handed over. It is not a substitute for walking the house. You still get a drawing, a demonstration of every scene, and labels in the utility room.</p>
+                        <p>Our work follows a certified quality process, from the first site visit to the last service call.</p>
                     </div>
                 </div>
             </section>
 
-            <section className="section section-tight">
-                <div className="wrap">
-                    <div className="section-head">
-                        <p className="kicker">Studios</p>
-                        <h2>Coimbatore and the Nilgiris.</h2>
-                        <p className="lede">Call either number. Say which house, and which studio is closer.</p>
-                    </div>
-                    <div className="studio-grid"><Studios /></div>
-                </div>
-            </section>
-
-            <Band />
+            <Band page="about" />
         </>
     );
 }

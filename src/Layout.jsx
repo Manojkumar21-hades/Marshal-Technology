@@ -126,7 +126,7 @@ export function TeamSection() {
         <section className="section team" id="team">
             <div className="wrap team-grid">
                 <div>
-                    <p className="kicker">01 · Our team</p>
+                    <p className="kicker">Our team</p>
                     <h2>{team.title}</h2>
                     <p className="lede">{team.summary}</p>
                     <ul className="team-points">{team.points.map((p) => <li key={p}>{p}</li>)}</ul>
@@ -141,14 +141,22 @@ export function TeamSection() {
     );
 }
 
-export function Band() {
+const BANDS = {
+    home: { kicker: "A site visit", title: "Tell us how the house is used.", text: "A floor plan, a few photos, or a list of rooms. We will say what is worth doing now, and what can wait." },
+    about: { kicker: "Talk to us", title: "Meet the team behind the work.", text: "Call either studio. The person you speak to is part of the team that will visit, install, and service." },
+    services: { kicker: "Not sure where to start?", title: "We will help you choose.", text: "Tell us about the house or the business. We will suggest the services that fit, and the ones you can skip." },
+    gallery: { kicker: "Like what you see?", title: "Let us plan one for you.", text: "Every job is customized. Share a few photos of your place and we will take it from there." },
+};
+
+export function Band({ page = "home" }) {
+    const b = BANDS[page];
     return (
         <section className="visit">
             <div className="wrap visit-inner">
                 <div>
-                    <p className="kicker kicker-light">A site visit</p>
-                    <h2>Tell us how the house is used.</h2>
-                    <p>A floor plan, a few photos, or a list of rooms. We will say what is worth automating now, and what can wait.</p>
+                    <p className="kicker kicker-light">{b.kicker}</p>
+                    <h2>{b.title}</h2>
+                    <p>{b.text}</p>
                 </div>
                 <Link className="btn btn-light" to="/contact">Contact the studio</Link>
             </div>
@@ -223,7 +231,7 @@ function Footer() {
                         <Wordmark />
                         <Swoosh />
                     </Link>
-                    <p className="footer-note">We automate your home. We welcome customization in your automation.</p>
+                    <p className="footer-note">Automation, security, power, and water solutions in the Nilgiris and Coimbatore.</p>
                 </div>
                 <div>
                     <h2>Studios</h2>
@@ -242,7 +250,7 @@ function Footer() {
                 </div>
             </div>
             <div className="wrap footer-base">
-                <p>Photographs on this site are concept studies of the kinds of homes and installations we design. They are not photographs of a named client project.</p>
+                <p>Photographs on this site are reference images, not photographs of a named client project.</p>
                 <p>&copy; {new Date().getFullYear()} Marshall Tech. ISO 9001:2015 certified.</p>
             </div>
         </footer>

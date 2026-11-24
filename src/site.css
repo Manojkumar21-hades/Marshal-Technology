@@ -1654,3 +1654,21 @@ p {
     background: var(--red);
     color: #fff;
 }
+
+.service .service-more {
+    display: inline-flex;
+    gap: 6px;
+    margin: auto 0 16px;
+    padding-top: 6px;
+    color: var(--red);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.service .service-more:hover {
+    color: var(--red-deep);
+}
+
+.pattern .service-items {
+    margin-bottom: 18px;
+}

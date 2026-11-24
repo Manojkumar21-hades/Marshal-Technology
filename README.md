@@ -1,6 +1,6 @@
 # Marshall Tech — Website
 
-**Marshall Tech — Inspiring Innovation.** This is the website for an ISO 9001:2015 certified automation, security, power and water solutions company. It has studios in Coimbatore and Coonoor (Nilgiris).
+**Marshall Tech — Inspiring Innovation.** This is the website for an ISO 9001:2015 certified automation, security, power and water solutions company. It has studios in Coonoor (Nilgiris) and Coimbatore. Live domain: **https://marshalltech.in**.
 
 The site is built with **React 19**, **React Router 7** and **Vite 6**. It is a static site with no backend, ready to host on **Netlify**.
 
@@ -56,9 +56,9 @@ On the Services page (`/projects`), YouTube links also play inside the page.
 
 | Route       | Page                                              |
 |-------------|---------------------------------------------------|
-| `/`         | Home: hero, team & districts, all services, how a job runs |
-| `/about`    | About the company, team & districts, ISO, studios |
-| `/projects` | Services: each service with everything it covers  |
+| `/`         | Home: hero, team & districts, service overview, Nilgiris & Coimbatore |
+| `/about`    | About the company, how a plan is made, ISO        |
+| `/projects` | Services: full details, video and share for each service |
 | `/gallery`  | Concept photo gallery                             |
 | `/contact`  | Enquiry form, phone numbers, studio addresses     |
 
@@ -99,6 +99,9 @@ Almost everything is in **`src/data.js`**:
 - `company.social`: YouTube / Instagram / Facebook / WhatsApp profile links. An empty link hides that icon.
 - `services`: the 7 service cards. Each one has a `name`, `summary`, an `includes` list of sub-items, and a `video` link. Paste a YouTube, Instagram or Facebook video URL into `video` and the "Watch video" button goes live.
 - `team`: the Team Work & Service District text and the `districts` list. Add more districts here.
+- `patterns`: the "Where we work" cards on Home (The Nilgiris, Coimbatore).
+
+Each photo is used only once on the site. When adding a photo, use a new image rather than reusing one already on another page.
 - `gallery`: to add a photo, put it in `public/images/` and add an entry here.
 
 ## Contact form
@@ -122,10 +125,14 @@ There is no backend. The form checks the fields, then opens the visitor's email 
 
 Run `npm run build`, then drag the `dist` folder onto https://app.netlify.com/drop.
 
-### Custom domain (marshallin.in)
+### Custom domain (marshalltech.in)
 
-1. In Netlify, go to **Domain management** → **Add a domain** and enter `marshallin.in`.
-2. At the domain registrar, either switch to Netlify's nameservers or add the DNS records Netlify lists. That is an `A` record for `marshallin.in` and a `CNAME` for `www` pointing to `<your-site>.netlify.app`.
+**Already set up.** The site is live at https://www.marshalltech.in, which is the primary domain. `marshalltech.in` redirects there, and HTTPS (Let's Encrypt) is on. The Netlify subdomain is `marshall-tech.netlify.app`. The site's canonical, share and sitemap links use `https://www.marshalltech.in`.
+
+To set it up again on a new Netlify site:
+
+1. In Netlify, go to **Domain management** → **Add a domain** and enter `marshalltech.in`.
+2. At the domain registrar, either switch to Netlify's nameservers or add the DNS records Netlify lists. That is an `A` record for `marshalltech.in` and a `CNAME` for `www` pointing to `<your-site>.netlify.app`.
 3. HTTPS is issued automatically once DNS resolves. This can take up to 24 hours.
 
 ## Notes
